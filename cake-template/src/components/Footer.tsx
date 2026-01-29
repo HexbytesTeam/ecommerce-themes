@@ -73,7 +73,7 @@ export default function Footer() {
                 </div>
 
                 <div className="pb-10 text-center text-muted-foreground text-sm">
-                    Copyright 2025 All Rights Reserved by HexBytes
+                    Copyright 2025 All Rights Reserved by <a href="https://www.hexbytes.in" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-bold">HexBytes</a>
                 </div>
             </div>
         </footer>

@@ -291,7 +291,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                                 <button
                                     onClick={handleAddToCart}
                                     className={`w-full py-4 rounded-full font-bold shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 ${product.isPreOrder
-                                        ? "bg-purple-600 text-white shadow-purple-500/20"
+                                        ? "bg-primary text-white shadow-pink-500/20"
                                         : "bg-primary text-white hover:bg-primary/90 shadow-pink-500/20"
                                         }`}
                                 >

@@ -40,10 +40,6 @@ export default function CandyBackground() {
                 <div className="text-5xl filter drop-shadow-lg rotate-12">🎂</div>
             </div>
 
-            {/* Decorative Glass Elements */}
-            <div className="absolute top-[15%] left-[40%] w-10 h-10 rounded-full bg-gradient-to-br from-pink-200/30 to-purple-200/30 animate-drift backdrop-blur-md border border-white/20 shadow-xl" style={{ animationDuration: '14s' }} />
-            <div className="absolute bottom-[35%] right-[40%] w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-100/20 to-orange-100/20 animate-float-slow backdrop-blur-sm border border-white/10" style={{ animationDuration: '11s' }} />
-            <div className="absolute top-[65%] left-[25%] w-8 h-8 rounded-full bg-gradient-to-bl from-blue-100/20 to-cyan-100/20 animate-drift" style={{ animationDuration: '19s' }} />
 
             {/* Sprinkles & Small Accents */}
             <div className="absolute top-[25%] left-[55%] w-1 h-6 bg-pink-400/20 rounded-full rotate-45 animate-drift" style={{ animationDuration: '24s' }} />
