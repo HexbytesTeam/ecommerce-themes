@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { HexBot } from "@/components/ai/HexBot";
+import { CompareProvider } from "@/context/CompareContext";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -30,10 +32,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased text-secondary`}
       >
-        <div className="grain-overlay" />
-        <Header />
-        {children}
-        <Footer />
+        <CompareProvider>
+          <div className="grain-overlay" />
+          <Header />
+          {children}
+          <Footer />
+          <HexBot />
+        </CompareProvider>
       </body>
     </html>
   );

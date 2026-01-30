@@ -91,29 +91,41 @@ export const Header = () => {
                         </motion.div>
 
                         <div className="flex items-center gap-3 lg:gap-5">
-                            <motion.button
-                                whileHover={{ scale: 1.1, y: -2 }}
-                                whileTap={{ scale: 0.9 }}
+                            <Link
+                                href="/profile"
                                 className="p-3 text-secondary hover:text-primary transition-all relative group"
                             >
                                 <User size={22} strokeWidth={2.5} />
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1, y: -2 }}
-                                whileTap={{ scale: 0.9 }}
-                                className="p-3 text-secondary hover:text-primary transition-all relative group"
-                            >
-                                <Heart size={22} strokeWidth={2.5} />
-                                <span className="absolute top-2 right-2 w-4 h-4 bg-primary text-secondary text-[8px] font-black flex items-center justify-center rounded-full border-2 border-white">2</span>
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.1, y: -2 }}
-                                whileTap={{ scale: 0.9 }}
-                                className="p-3 bg-secondary text-white rounded-2xl hover:bg-primary hover:text-secondary transition-all shadow-xl shadow-secondary/10 flex items-center gap-3 px-5 lg:px-6"
-                            >
-                                <ShoppingBag size={20} strokeWidth={2.5} />
-                                <span className="text-xs font-black hidden sm:inline">04</span>
-                            </motion.button>
+                            </Link>
+                            <Link href="/wishlist">
+                                <motion.button
+                                    whileHover={{ scale: 1.1, y: -2 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="p-3 text-secondary hover:text-primary transition-all relative group"
+                                >
+                                    <Heart size={22} strokeWidth={2.5} />
+                                    <span className="absolute top-2 right-2 w-4 h-4 bg-primary text-secondary text-[8px] font-black flex items-center justify-center rounded-full border-2 border-white">2</span>
+                                </motion.button>
+                            </Link>
+                            <Link href="/cart">
+                                <motion.div
+                                    whileHover={{ scale: 1.05, y: -2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="relative p-3 bg-secondary text-white rounded-2xl hover:bg-primary hover:text-secondary transition-all shadow-xl shadow-secondary/10 flex items-center gap-3 px-5 lg:px-6 cursor-pointer group"
+                                >
+                                    <div className="relative">
+                                        <ShoppingBag size={20} strokeWidth={2.5} />
+                                        <motion.span
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="absolute -top-2 -right-2 w-5 h-5 bg-primary text-secondary text-[9px] font-black flex items-center justify-center rounded-full border-2 border-white group-hover:bg-secondary group-hover:text-white transition-all"
+                                        >
+                                            4
+                                        </motion.span>
+                                    </div>
+                                    <span className="text-xs font-black hidden sm:inline group-hover:tracking-wider transition-all">CART</span>
+                                </motion.div>
+                            </Link>
 
                             <button
                                 className="lg:hidden p-3 text-secondary hover:bg-gray-100 rounded-xl transition-all"

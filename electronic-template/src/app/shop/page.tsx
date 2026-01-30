@@ -8,24 +8,7 @@ import { Search, SlidersHorizontal, ChevronDown, ShoppingBag, Heart, Star, Layou
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
-// Extensive Product Data
-const ALL_PRODUCTS = [
-    { id: 1, name: "MacBook Pro M2 Air", category: "Laptops", brand: "Apple", price: 999.00, rating: 5, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=400&auto=format&fit=crop" },
-    { id: 2, name: "Sony WH-1000XM5", category: "Headphones", brand: "Sony", price: 349.00, rating: 5, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=400&auto=format&fit=crop" },
-    { id: 3, name: "DJI Mavic Air 2S", category: "Drones", brand: "DJI", price: 899.00, rating: 4, image: "https://images.unsplash.com/photo-1473968512647-3e44a224fe8f?q=80&w=400&auto=format&fit=crop" },
-    { id: 4, name: "Canon EOS R5", category: "Cameras", brand: "Canon", price: 3299.00, rating: 5, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=400&auto=format&fit=crop" },
-    { id: 5, name: "Sonos Era 300", category: "Speakers", brand: "Sonos", price: 449.00, rating: 5, image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=400&auto=format&fit=crop" },
-    { id: 6, name: "iPad Pro 12.9 Inch", category: "Tablets", brand: "Apple", price: 1099.00, rating: 5, image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=400&auto=format&fit=crop" },
-    { id: 7, name: "Meta Quest 3 VR", category: "Gadgets", brand: "Meta", price: 499.00, rating: 4, image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=400&auto=format&fit=crop" },
-    { id: 8, name: "Apple Watch Ultra", category: "Watches", brand: "Apple", price: 799.00, rating: 5, image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=400&auto=format&fit=crop" },
-    { id: 9, name: "Samsung Galaxy S24 Ultra", category: "Mobiles", brand: "Samsung", price: 1299.00, rating: 5, image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=400&auto=format&fit=crop" },
-    { id: 10, name: "ASUS ROG Zephyrus G14", category: "Laptops", brand: "ASUS", price: 1599.00, rating: 4, image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=400&auto=format&fit=crop" },
-    { id: 11, name: "Bose QuietComfort Ultra", category: "Headphones", brand: "Bose", price: 429.00, rating: 5, image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=400&auto=format&fit=crop" },
-    { id: 12, name: "Keychron K2 V2 Wireless", category: "Gadgets", brand: "Keychron", price: 89.00, rating: 4, image: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=400&auto=format&fit=crop" },
-];
-
-const CATEGORIES = ["All", "Laptops", "Headphones", "Drones", "Cameras", "Speakers", "Tablets", "Gadgets", "Watches", "Mobiles"];
-const BRANDS = ["All", "Apple", "Sony", "DJI", "Canon", "Sonos", "Meta", "Samsung", "ASUS", "Bose", "Keychron"];
+import { ALL_PRODUCTS, CATEGORIES, BRANDS } from "@/lib/products";
 function ShopContent() {
     const searchParams = useSearchParams();
     const initialCategory = searchParams.get("category");
