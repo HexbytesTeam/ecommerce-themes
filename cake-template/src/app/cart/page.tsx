@@ -73,7 +73,7 @@ export default function CartPage() {
                                                     <div className="flex justify-between items-start mb-2">
                                                         <h3 className="font-serif font-bold text-lg">{item.name}</h3>
                                                         <button
-                                                            onClick={() => removeFromCart(item.id)}
+                                                            onClick={() => removeFromCart(item.cartItemId || item.id)}
                                                             className="text-gray-400 hover:text-red-500 transition-colors hover:bg-red-50 p-2 rounded-full"
                                                         >
                                                             <Trash2 size={18} />
@@ -84,14 +84,14 @@ export default function CartPage() {
                                                     <div className="flex items-center gap-4">
                                                         <div className="flex items-center bg-gray-50 rounded-full p-1 border border-gray-100 shadow-sm">
                                                             <button
-                                                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                                                onClick={() => updateQuantity(item.cartItemId || item.id, item.quantity - 1)}
                                                                 className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:shadow-sm text-muted-foreground transition-all"
                                                             >
                                                                 <Minus size={14} />
                                                             </button>
                                                             <span className="w-8 text-center font-bold text-sm">{item.quantity}</span>
                                                             <button
-                                                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                                                onClick={() => updateQuantity(item.cartItemId || item.id, item.quantity + 1)}
                                                                 className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:shadow-sm text-primary transition-all"
                                                             >
                                                                 <Plus size={14} />
