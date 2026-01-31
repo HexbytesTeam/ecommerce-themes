@@ -250,14 +250,16 @@ export default function CartPage() {
                                     </div>
 
                                     {/* Checkout Button */}
-                                    <motion.button
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="w-full bg-primary text-secondary px-8 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-secondary hover:text-white transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-4"
-                                    >
-                                        Proceed to Checkout
-                                        <ArrowRight size={18} />
-                                    </motion.button>
+                                    <Link href="/checkout">
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="w-full bg-primary text-secondary px-8 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-secondary hover:text-white transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-4"
+                                        >
+                                            Proceed to Checkout
+                                            <ArrowRight size={18} />
+                                        </motion.button>
+                                    </Link>
 
                                     {/* Trust Badges */}
                                     <div className="pt-6 border-t border-gray-100 space-y-4">
